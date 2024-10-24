@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Our Event Management System</h2>
+        <p>We manage and organize amazing events just for you. Explore our upcoming events and register to participate.</p>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-list">
+            <!-- Events will be loaded here dynamically using JavaScript -->
+        </div>
+    </section>
+
+    <section id="register">
+        <h2>Register for an Event</h2>
+        <form id="registration-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="event">Event:</label>
+            <select id="event" name="event" required>
+                <!-- Event options will be loaded dynamically using JavaScript -->
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
