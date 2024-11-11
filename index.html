@@ -3,54 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Management System</title>
+    <title>Beacon - All Your Events In One Place</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Top Navigation Bar -->
     <header>
-        <h1>Event Management System</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#register">Register</a></li>
-            </ul>
+        <nav class="navbar">
+            <a href="#home" class="nav-item">HOME</a>
+            <a href="#wlu" class="nav-item">Wilfrid Laurier University</a>
+            <a href="#uw" class="nav-item">University of Waterloo</a>
         </nav>
     </header>
 
-    <section id="home">
-        <h2>Welcome to Our Event Management System</h2>
-        <p>We manage and organize amazing events just for you. Explore our upcoming events and register to participate.</p>
-    </section>
-
-    <section id="events">
-        <h2>Upcoming Events</h2>
-        <div class="event-list">
-            <!-- Events will be loaded here dynamically using JavaScript -->
+    <!-- Homepage Content -->
+    <section id="home" class="page-content">
+        <div class="hero">
+            <h1>Beacon</h1>
+            <p>All Your Events In One Place</p>
+        </div>
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>At Beacon, we’re dedicated to simplifying campus life for university students across Ontario. Our web application is designed to consolidate all campus events, from seminars and workshops to club activities and recruitment fairs, into one user-friendly platform.</p>
         </div>
     </section>
 
-    <section id="register">
-        <h2>Register for an Event</h2>
-        <form id="registration-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="event">Event:</label>
-            <select id="event" name="event" required>
-                <!-- Event options will be loaded dynamically using JavaScript -->
-            </select>
-
-            <button type="submit">Register</button>
-        </form>
+    <!-- WLU Page with Calendar -->
+    <section id="wlu" class="page-content">
+        <header class="wlu-header">
+            <h1>Wilfrid Laurier University</h1>
+        </header>
+        <h2>Monthly Events</h2>
+        <div class="calendar">
+            <div class="calendar-header">
+                <button onclick="prevMonth('wlu')">&#8249;</button>
+                <span id="month-year-wlu">November 2024</span>
+                <button onclick="nextMonth('wlu')">&#8250;</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body-wlu">
+                    <!-- Calendar days will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Event Management System. All Rights Reserved.</p>
-    </footer>
+    <!-- University of Waterloo Page with Calendar -->
+    <section id="uw" class="page-content">
+        <header class="uw-header">
+            <h1>University of Waterloo</h1>
+        </header>
+        <h2>Monthly Events</h2>
+        <div class="calendar">
+            <div class="calendar-header">
+                <button onclick="prevMonth('uw')">&#8249;</button>
+                <span id="month-year-uw">November 2024</span>
+                <button onclick="nextMonth('uw')">&#8250;</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body-uw">
+                    <!-- Calendar days will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
